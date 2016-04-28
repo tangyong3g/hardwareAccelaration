@@ -1,0 +1,33 @@
+<manifest package="fr.smarquis.hardwareacceleration"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--NOTE: This hardwareAccelerated attribute is partly responsible of the defect-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".HardwareAcceleratedActivity"
+            android:hardwareAccelerated="true"
+            android:label="HardwareAccelerated">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotHardwareAcceleratedActivity"
+            android:hardwareAccelerated="false"
+            android:label="NotHardwareAccelerated">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
