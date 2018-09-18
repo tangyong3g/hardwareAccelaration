@@ -38,3 +38,5 @@ captures/
 /.idea/workspace.xml
 /.idea/libraries
 /build
+/.idea/*
+/.idea/

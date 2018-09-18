@@ -1,5 +1,5 @@
-<manifest package="fr.smarquis.hardwareacceleration"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.smarquis.hardwareacceleration">
 
     <!--NOTE: This hardwareAccelerated attribute is partly responsible of the defect-->
     <application
@@ -11,20 +11,17 @@
         <activity
             android:name=".HardwareAcceleratedActivity"
             android:hardwareAccelerated="true"
-            android:label="HardwareAccelerated">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="HardwareAccelerated"></activity>
         <activity
             android:name=".NotHardwareAcceleratedActivity"
             android:hardwareAccelerated="false"
-            android:label="NotHardwareAccelerated">
+            android:label="NotHardwareAccelerated"></activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

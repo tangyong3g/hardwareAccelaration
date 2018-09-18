@@ -10,6 +10,7 @@ import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -62,6 +63,9 @@ public class CustomView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        long start= System.currentTimeMillis();
+
         point.draw(canvas, paint);
         circle.draw(canvas, paint);
         rect.draw(canvas, paint);
@@ -70,6 +74,8 @@ public class CustomView extends View {
 
         textPaint.setColor(willFail(canvas) ? Color.RED : Color.GREEN);
         canvas.drawText("Hardware Accelerated: " + canvas.isHardwareAccelerated(), 50, 50, textPaint);
+
+        Log.i("tyler.tang",(System.currentTimeMillis() -start)+"");
     }
 
     @Override
